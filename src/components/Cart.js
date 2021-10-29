@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Navbar() {
+export default function Cart() {
     return (
         <div>
-            This is NavBar 3.
+            This is Cart
         </div>
     )
 }
