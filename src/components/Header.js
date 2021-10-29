@@ -1,11 +1,11 @@
 import React from 'react'
 import '../css/Header.css'
-import amazonimg from "../images/amazon-logo.png"
+import amazonimg from "../images/Amazon-logo-black-template.png"
 import { Link } from "react-router-dom";
 export default function Header() {
     return (
         <div className='header'>
-        <img className="header_logo" src={amazonimg} />
+        <Link to ="/"><img className="header_logo" src={amazonimg} /></Link>
 
         <div className='header_search'>
             <input className='header_searchinput'
@@ -39,7 +39,7 @@ export default function Header() {
                     </span> 
           </div>
           <div className='header_option'>
-          <Link to ="/cart"><i class="fas fa-shopping-cart  cart_one"></i> </Link>  
+          <Link to ="/cart"><i class="fas fa-shopping-cart  cart_one fa-2x"></i><span style={{color:"white",marginLeft:"5px",textDecoration:"none"}}>0</span> </Link>  
           </div>
                 
         </div>

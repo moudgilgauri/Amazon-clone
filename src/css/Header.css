@@ -1,53 +1,71 @@
-.header{
-    height:60px;
-    display:flex;
-    align-items: center;
-    background-color: #0a1b30;
-    position:sticky;
-    top:0;
-    z-index:100;
+.header {
+	height: 60px;
+	display: flex;
+	align-items: center;
+	background-color: #080808;
+	position: sticky;
+	top: 0;
+	z-index: 100;
 }
-.header_logo{
-    width:100px;
-    object-fit:contain;
-    margin:0 20px;
-    margin-top : 18px;
+.header_logo {
+	width: 100px;
+	object-fit: contain;
+	margin: 0 20px;
+	margin-top: 8px;
+	border: 1px solid transparent;
 }
-.header_search{
-    display:flex;
-    flex:1;
-    align-items: center;
-    border-radius: 24px;
+.header_logo:hover {
+	cursor: pointer;
+	border: 1px solid white;
 }
-.header_searchinput{
-    height:12px;
-    padding:10px;
-    border:none;
-    width:100%;
-} 
-.header_searchIcon{
- padding: 5px;
- height:22px !important;
- background-color: blanchedalmond;
+.header_search {
+	display: flex;
+	flex: 1;
+	align-items: center;
+	border-radius: 24px;
+	/* border: 1px solid white; */
 }
-.header_optionlineone{
-    font-size:10px;
+.header_searchinput {
+	height: 12px;
+	padding: 10px;
+	border: none;
+	width: 97%;
+	/* border-radius: 24px; */
 }
-.header_optionlinetwo{
-    font-size: 13px;
-    font-weight:800;
+.header_searchIcon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5px;
+	width: 3%;
+	height: 22px !important;
+	background-color: rgb(255, 155, 5);
+	/* border-radius: 24px; */
 }
-.header_nav{
-    display:flex;
-    justify-content: space-evenly;
+.header_optionlineone {
+	font-size: 10px;
 }
-.header_option{
-    display:flex;
-    flex-direction: column;
-    margin-left: 10px;
-    margin-right:10px;
-    color:white;
+.header_optionlinetwo {
+	font-size: 13px;
+	font-weight: 800;
 }
-.cart_one{
-    color:white;
+.header_nav {
+	display: flex;
+	justify-content: space-between;
+}
+.header_option {
+	padding: 10px 10px;
+	display: flex;
+	flex-direction: column;
+	margin-left: 10px;
+	margin-right: 10px;
+	color: white;
+	border: 1px solid transparent;
+}
+.header_option:hover {
+	border: 1px solid white;
+	cursor: pointer;
+}
+.cart_one {
+	color: white;
 }
