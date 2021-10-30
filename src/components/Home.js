@@ -16,7 +16,7 @@ export default function Home() {
             <div className="home_container">
                 <img className="home_image" src={myImage} alt="" />
                 <div className="home_row">
-                   <Product title="This is lean learning" image={lean_startup} price={19.09} rating={5}/>
+                   <Product title="This is a book about practicing, learning, and sharing our experiences with the Lean methodology and the Toyota Production System." image={lean_startup} price={1200} rating={5}/>
                    <Product title="Zebronics ZEB-FIT7220CH Smart Fitness Watch with Call Function via Built-in Speaker & Mic" image={zebronics} price={3099.00} rating={4}/>
                    <Product title="Boult Audio AirBass Propods TWS Earbuds with 24H Total Playtime, Type-C Fast Charging" image={boult} price={1199.00} rating={3}/>
                     

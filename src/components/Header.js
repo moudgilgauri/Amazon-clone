@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Header() {
     return (
         <div className='header'>
-        <Link to ="/"><img className="header_logo" src={amazonimg} /></Link>
+        <Link to ="/"><img className="header_logo" src={amazonimg} alt="" /></Link>
 
         <div className='header_search'>
             <input className='header_searchinput'
