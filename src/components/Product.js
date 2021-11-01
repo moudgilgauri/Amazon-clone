@@ -1,7 +1,25 @@
 import React from 'react'
 
 import "../css/Product.css"
-export default function Product({id,title,price,image,rating}) {
+import { useStateValue } from './StateProvider'
+
+export default function Product({ id, title, price, image, rating }) {
+    const [state, dispatch] = useStateValue();
+    
+    const addtoCart = () => {
+        
+        dispatch({
+            type:"ADD_TO_CART",
+            item:{
+                id:id,
+                title:title,
+                price:price,
+                image:image,
+                rating:rating
+            }
+        })
+    }
+    
     return (
         <div className="product">
             <div className="product_info">
@@ -14,7 +32,7 @@ export default function Product({id,title,price,image,rating}) {
                     </div>
             </div>
             <img src={image} alt="" />
-            <button>Add to basket</button>
+            <button onClick={addtoCart}>Add to basket</button>
         </div>
     )
 }

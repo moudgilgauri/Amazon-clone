@@ -2,7 +2,9 @@ import React from 'react'
 import '../css/Header.css'
 import amazonimg from "../images/Amazon-logo-black-template.png"
 import { Link } from "react-router-dom";
+import { useStateValue } from './StateProvider'
 export default function Header() {
+    const [{cart}] = useStateValue();
     return (
         <div className='header'>
         <Link to ="/"><img className="header_logo" src={amazonimg} alt="" /></Link>
@@ -39,7 +41,7 @@ export default function Header() {
                     </span> 
           </div>
           <div className='header_option'>
-          <Link to ="/cart"><i class="fas fa-shopping-cart  cart_one fa-2x"></i><span style={{color:"white",marginLeft:"5px",textDecoration:"none"}}>0</span> </Link>  
+          <Link to ="/cart"><i class="fas fa-shopping-cart  cart_one fa-2x"></i><span style={{color:"white",marginLeft:"5px",textDecoration:"none"}}>{cart?.length}</span> </Link>  
           </div>
                 
         </div>
