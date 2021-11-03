@@ -1,10 +1,13 @@
 import React from 'react'
 import "../css/Subtotal.css"
+import { useStateValue } from './StateProvider'
+import { getCartTotal } from './Reducer';
 export default function Subtotal() {
+    const [{cart}] = useStateValue();
     return (
         <div className="subtotal">
-           <p style={{marginTop:"-10px"}}><strong>Subtotal ({0} items)</strong>:
-           <strong>{0}</strong>
+           <p style={{marginTop:"-10px"}}><strong>Subtotal ({cart?.length} items)</strong>:
+           <strong>₹{getCartTotal(cart)}</strong>
            </p>
            <small className="subtotal_gift">
                <input type="checkbox" /> This order contains a gift

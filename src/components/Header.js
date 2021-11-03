@@ -41,7 +41,7 @@ export default function Header() {
                     </span> 
           </div>
           <div className='header_option'>
-          <Link to ="/cart"><i class="fas fa-shopping-cart  cart_one fa-2x"></i><span style={{color:"white",marginLeft:"5px",textDecoration:"none"}}>{cart?.length}</span> </Link>  
+          <Link to ="/cart"><i className="fas fa-shopping-cart  cart_one fa-2x"></i><span style={{color:"orange",marginLeft:"5px"}}>{cart?.length}</span> </Link>  
           </div>
                 
         </div>

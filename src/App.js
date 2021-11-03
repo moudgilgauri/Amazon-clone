@@ -8,6 +8,9 @@ import {
 } from "react-router-dom";
 import Home from './components/Home';
 import Cart from './components/Cart';
+import Full from './components/Full';
+
+
 
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
           </Route>
           <Route exact path="/cart">
           <Cart/>
+          </Route>
+          <Route exact path="/fullProduct">
+          <Full/>
           </Route>
         </Switch>
     </Router>
