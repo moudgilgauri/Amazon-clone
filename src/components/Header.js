@@ -16,14 +16,16 @@ export default function Header() {
            
         </div>
         <div className='header_nav'>
-          <div className='header_option'>
-                    <span className="header_optionlineone">
-                        Hello Guest 
-                    </span>
-                    <span className="header_optionlinetwo">
-                         Sign In
-                    </span>
-          </div>
+          <Link to="/login">
+              <div className='header_option'>
+                        <span className="header_optionlineone">
+                            Hello Guest
+                        </span>
+                        <span className="header_optionlinetwo">
+                             Sign In
+                        </span>
+              </div>
+          </Link>
           <div className='header_option'>
                     <span className="header_optionlineone">
                         Retunrs
