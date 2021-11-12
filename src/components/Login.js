@@ -10,6 +10,12 @@ export default function Login() {
 
     const signIn =(e)=>{
         e.preventDefault();
+
+        auth.signInWithEmailAndPassword(email,password)
+        .then(auth=>{
+                history.push('/');
+        })
+        .catch(error=>alert(error.message));
     }
     const Register =(e)=>{
         e.preventDefault();
@@ -17,7 +23,10 @@ export default function Login() {
         auth.createUserWithEmailAndPassword(email,password)
         .then((auth)=>{
             console.log(auth);
-            history.push('/')
+            if(auth){
+
+                history.push('/');
+            }
         })
         .catch(error=>alert(error.message));
     }

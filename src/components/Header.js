@@ -3,8 +3,14 @@ import '../css/Header.css'
 import amazonimg from "../images/Amazon-logo-black-template.png"
 import { Link } from "react-router-dom";
 import { useStateValue } from './StateProvider'
+import { auth } from './firebase';
 export default function Header() {
-    const [{cart}] = useStateValue();
+    const [{cart,user}] = useStateValue();
+    const handleAuthentication =()=>{
+        if(user){
+            auth.signOut();
+        }
+    }
     return (
         <div className='header'>
         <Link to ="/"><img className="header_logo" src={amazonimg} alt="" /></Link>
@@ -16,13 +22,14 @@ export default function Header() {
            
         </div>
         <div className='header_nav'>
-          <Link to="/login">
-              <div className='header_option'>
+          <Link to={!user && '/login'}>
+              <div onClick={handleAuthentication}
+              className='header_option'>
                         <span className="header_optionlineone">
-                            Hello Guest
+                            Hello {user? user?.email:'Guest'}
                         </span>
                         <span className="header_optionlinetwo">
-                             Sign In
+                             {user?'Sign Out':'Sign In'}
                         </span>
               </div>
           </Link>

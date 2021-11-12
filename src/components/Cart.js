@@ -5,12 +5,14 @@ import Subtotal from './Subtotal'
 import CartProduct from './CartProduct'
 import { useStateValue } from './StateProvider'
 export default function Cart() {
-    const [{cart}] = useStateValue();
+    const [{cart,user}] = useStateValue();
     return (
         <div className="cart">
             <div className="cart_left">
                 <img src={ad} alt="" className="cart_left_img" />
-                <div ><h2 className="cart_title">Your Shopping Cart</h2>
+                <div >
+                    <h3>{user?`Hello, ${user?.email}`:''}</h3>
+                    <h2 className="cart_title">Your Shopping Cart</h2>
                 {cart.map(item=>(
                     <CartProduct
                     id={item.id}
