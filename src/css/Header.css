@@ -2,10 +2,13 @@
 	height: 60px;
 	display: flex;
 	align-items: center;
+	/* justify-content: center; */
 	background-color: #080808;
 	position: sticky;
 	top: 0;
 	z-index: 100;
+	width: 100%;
+	/* border: 3px solid yellow; */
 }
 .header_logo {
 	width: 100px;
@@ -68,4 +71,33 @@
 }
 .cart_one {
 	color: white;
+}
+@media only screen and (max-width: 650px) {
+	.header {
+		/* background-color: lightblue; */
+		width: 120vw;
+		justify-content: space-evenly;
+	}
+	.header_search {
+		display: none;
+	}
+}
+@media only screen and (max-width: 550px) {
+	.header {
+		/* background-color: lightblue; */
+		width: 124vw;
+		/* justify-content: space-evenly; */
+	}
+}
+@media only screen and (max-width: 465px) {
+	.header {
+		/* background-color: lightblue; */
+		width: 130vw;
+	}
+}
+@media only screen and (max-width: 400px) {
+	.header {
+		/* background-color: lightblue; */
+		width: 140vw;
+	}
 }
